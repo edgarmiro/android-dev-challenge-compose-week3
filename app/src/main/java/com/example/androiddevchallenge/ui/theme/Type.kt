@@ -17,27 +17,75 @@ package com.example.androiddevchallenge.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.em
 import androidx.compose.ui.unit.sp
+import com.example.androiddevchallenge.R
+
+val KulinPark = FontFamily(
+    Font(R.font.kulimpark_light, FontWeight.Light),
+    Font(R.font.kulimpark_regular, FontWeight.Normal),
+)
+
+val Lato = FontFamily(
+    Font(R.font.lato_bold, FontWeight.Bold),
+    Font(R.font.lato_regular, FontWeight.Normal),
+)
 
 // Set of Material typography styles to start with
 val typography = Typography(
-    body1 = TextStyle(
-        fontFamily = FontFamily.Default,
+    h1 = TextStyle(
+        fontFamily = KulinPark,
+        fontWeight = FontWeight.Light,
+        fontSize = 28.sp,
+        letterSpacing = 0.041.em
+    ),
+    h2 = TextStyle(
+        fontFamily = KulinPark,
         fontWeight = FontWeight.Normal,
-        fontSize = 16.sp
-    )
-        /* Other default text styles to override
+        fontSize = 15.sp,
+        letterSpacing = 0.076.em,
+        // CAPS
+    ),
+    h3 = TextStyle(
+        fontFamily = Lato,
+        fontWeight = FontWeight.Bold,
+        fontSize = 14.sp,
+        letterSpacing = 0.em,
+    ),
+    body1 = TextStyle(
+        fontFamily = Lato,
+        fontWeight = FontWeight.Normal,
+        fontSize = 14.sp,
+        letterSpacing = 0.em
+    ),
     button = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.W500,
-        fontSize = 14.sp
+        fontFamily = Lato,
+        fontWeight = FontWeight.Bold,
+        fontSize = 14.sp,
+        letterSpacing = 0.082.em
+        // CAPS
     ),
     caption = TextStyle(
-        fontFamily = FontFamily.Default,
+        fontFamily = KulinPark,
         fontWeight = FontWeight.Normal,
-        fontSize = 12.sp
-    )
-    */
+        fontSize = 12.sp,
+        letterSpacing = 0.095.em,
+        // CAPS
+    ),
+
+    /* Other default text styles to override
+button = TextStyle(
+    fontFamily = FontFamily.Default,
+    fontWeight = FontWeight.W500,
+    fontSize = 14.sp
+),
+caption = TextStyle(
+    fontFamily = FontFamily.Default,
+    fontWeight = FontWeight.Normal,
+    fontSize = 12.sp
+)
+*/
 )
